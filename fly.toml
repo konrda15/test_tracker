@@ -1,4 +1,4 @@
-app = "test_tracker"  # Replace this with your actual Fly.io app name
+app = "testtracker"  # Replace this with your actual Fly.io app name
 
 primary_region = "fra"
 
