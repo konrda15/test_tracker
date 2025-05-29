@@ -1,11 +1,23 @@
-app = "testtracker"  # Replace this with your actual Fly.io app name
+# fly.toml app configuration file generated for test-tracker on 2025-05-29T20:10:58Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-primary_region = "fra"
+app = 'test-tracker'
+primary_region = 'fra'
 
-[env]
-PORT = "3000"
-LOG_PATH = "/data/visits.log" # for persistent volume (optional)
+[build]
 
-[[mounts]]
-source = "data"
-destination = "/data"
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
