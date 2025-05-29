@@ -1,0 +1,12 @@
+{
+  "name": "node-visitor-logger",
+  "version": "1.0.0",
+  "description": "Logs visitor IP, browser, referrer and timestamp",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
